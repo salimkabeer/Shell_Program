@@ -1,0 +1,19 @@
+When you change your password with passwd command, your new password is stored in the file /etc/shadow.
+
+Additional permissions are given to programs via a mechanism known as the Set User ID (SUID)and Set Group ID (SGID)bits.
+When you execute a program that has the SUID bit enabled, you inherit the permissions of that  program's  owner.  
+Programs  that  do  not  have  the  SUID  bit  set  are  run  with  the permissions of the user who started the program.
+This is the case with SGID as well. Normally, programs execute with your group permissions, but  instead  your  group  
+will  be  changed  just  for  this  program  to  the  group  owner  of  the program.The SUID and SGID bits will appear 
+as the letter "s" if the permission is available. The SUID "s" bit will be located in the permission bits where the 
+owners execute permission normally resides. For example, the command -
+
+salim@salim-VirtualBox ~ $ ls -l /usr/bin/passwd 
+-rwsr-xr-x 1 root root 59640 Jan 25  2018 /usr/bin/passwd
+
+# To set the SUID and SGID bits for any directory :-
+$ chmod ug+s dirname
+$ ls -l
+drwsr-sr-x 2 root root  4096 Jun 19 06:45 dirname
+
+

@@ -1,0 +1,52 @@
+# Note:-
+	1. single dot(.) represents current directory
+ 	2. double dot(..) represents parent directory
+	3. .profile is Bourne shell initialization script
+	4. When you change your password with passwd command, your new password is stored in the file /etc/shadow.
+
+# commands have shell as their parent id
+salim@salim-VirtualBox ~ $ ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+salim    27923 30746  0 22:42 pts/0    00:00:00 ps -f
+salim    30746 30736  0 21:28 pts/0    00:00:00 bash
+
+# Finger command
+salim@salim-VirtualBox ~ $ finger
+Login     Name       Tty      Idle  Login Time   Office     Office Phone
+salim     salim     *:0             Jun  3 10:09 (:0)
+salim@salim-VirtualBox ~ $ finger salim
+Login: salim          			Name: salim
+Directory: /home/salim              	Shell: /bin/bash
+On since Mon Jun  3 10:09 (IST) on :0 from :0 (messages off)
+No mail.
+No Plan.
+
+# To change the password 
+salim@salim-VirtualBox ~ $ passwd
+Changing password for salim.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+
+# Who are you?
+salim@salim-VirtualBox ~ $ whoami
+salim
+
+# who are logged in?
+salim@salim-VirtualBox ~ $ users
+salim
+salim@salim-VirtualBox ~ $ who
+salim    :0           2019-06-03 10:09 (:0)
+salim@salim-VirtualBox ~ $ w
+ 21:41:33 up 10:20,  1 user,  load average: 0.64, 0.75, 0.54
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+salim    :0       :0               10:09   ?xdm?  11:48   0.01s /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu
+
+# To change Ownership of a file
+salim@salim-VirtualBox ~ $ chown salim filename
+
+# Ro change Group ownership of a file
+salim@salim-VirtualBox ~ $ chgrp groupname filename
+
+
