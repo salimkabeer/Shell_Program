@@ -3,4 +3,13 @@ read -p "Enter a string : " str
 
 strLen=${#str}
 
-echo ${str[1]}
+# Reverse the string
+revStr=$( echo $str | rev )
+echo $revStr
+
+if [ $revStr = $str ]
+then
+    echo It is palindrome
+else
+    echo Not a palindrome
+fi
