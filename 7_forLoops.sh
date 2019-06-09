@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Example 1
 for i in 1 2 3 4 5 
 do
@@ -23,9 +25,8 @@ do
 	echo $i
 done
 
-
-# Example 
-#for (( c=1; c<=5; c++ ))
-#do
-#	echo $c
-#done
+# Example 5
+for (( c=1; c<=5; c++ ))
+do
+	echo $c
+done
