@@ -1,0 +1,2 @@
+ #### To search for a file 
+ find ./folder_name/ -type f -name *.j2
