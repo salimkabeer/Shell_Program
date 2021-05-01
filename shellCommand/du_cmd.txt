@@ -1,0 +1,2 @@
+#### To know folder size
+sudo du -ch --max-depth=1
